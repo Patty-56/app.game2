@@ -1,10 +1,11 @@
 import streamlit as st
 import json
 
-with open('python_quizzes.json', 'r', encoding='utf-8') as f:
+with open('python_quizzes_Version2.json', 'r', encoding='utf-8') as f:
     python_quizzes = json.load(f)
-with open('story_days.json', 'r', encoding='utf-8') as f:
+with open('story_days_Version9.json', 'r', encoding='utf-8') as f:
     story_days = json.load(f)
+
 
 TOTAL_DAYS = 21
 

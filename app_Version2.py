@@ -53,7 +53,6 @@ if st.session_state.step == 'story':
     story = story_days[st.session_state.current_day - 1]
     st.subheader("故事劇情")
     st.write(story['story'])
-    st.write(f"**今日線索：**{story['clue']}")
     if st.button("進入 Python 小題目"):
         st.session_state.step = 'quiz'
     st.stop()

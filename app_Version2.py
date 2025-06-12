@@ -60,16 +60,26 @@ if st.session_state.step == 'story':
 if st.session_state.step == 'quiz':
     quiz = python_quizzes[st.session_state.current_day - 1]
     st.subheader("Python 小題目")
-    st.code(quiz['question'])
-    user_ans = st.text_area("請輸入你的答案")
-    def is_correct(a, b):
-        return a.replace(' ', '').replace('\n', '') == b.replace(' ', '').replace('\n', '')
+
+    # 1. 顯示教學區
+    with st.expander("教學範例"):
+        st.write(quiz["example"]["question"])
+        st.code(quiz["example"]["answer"], language="python")
+        st.info(quiz["example"]["explanation"])
+
+    # 2. 顯示練習題選擇區
+    st.write(quiz["practice"]["question"])
+    option = st.radio("請選出正確答案：", quiz["practice"]["options"], key=st.session_state.current_day)
+
     if st.button("送出"):
-        if is_correct(user_ans, quiz['answer']):
+        correct_option = quiz["practice"]["answer"]
+        if option.startswith(correct_option):  # "B. ..." 開頭
+            st.success("答對了！")
+            st.info(f"解析：{quiz['practice']['explanation']}")
             st.session_state.step = 'suspect'
         else:
-            st.error("答案不正確，請再試試！")
-            st.info(f"提示：{quiz.get('hint','')}")
+            st.error("答錯了，請再試試！")
+            st.info(f"解析：{quiz['practice']['explanation']}")
     st.stop()
 
 if st.session_state.step == 'suspect':

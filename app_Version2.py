@@ -20,7 +20,7 @@ if 'amount' not in st.session_state:
 if 'step' not in st.session_state:
     st.session_state.step = 'input'
 
-st.title("21天飲水＆推理＆Python打卡計畫")
+st.title("🌌 水色之夜")
 
 if st.session_state.user is None:
     st.subheader("輸入身高與體重")

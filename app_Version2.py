@@ -84,16 +84,16 @@ if st.session_state.step == 'quiz':
 
 if st.session_state.step == 'suspect':
     story = story_days[st.session_state.current_day - 1]
-    st.subheader("推理時間！誰最可疑？")
-    suspects = story.get('suspects')
-    if suspects:
-        suspect = st.radio("請選擇嫌疑人：", suspects)
+    st.subheader("推理時間！" + story.get("question", "誰最可疑？"))
+    choices = story.get('choices')
+    if choices:
+        suspect = st.radio("請選擇嫌疑人：", choices)
         if st.button("選擇"):
-            if suspect == story['correct']:
-                st.success(f"答對！{story['reason']}")
+            if choices.index(suspect) == story['answer_index']:
+                st.success(f"答對！{story['explanation']}")
                 st.session_state.current_day += 1
                 st.session_state.amount = 0
                 st.session_state.step = 'water'
-        else:
-            st.error("答錯了，可以再試一次！")
+            else:
+                st.error("答錯了，可以再試一次！")
     st.progress(st.session_state.current_day - 1, f"進度：{st.session_state.current_day - 1}/{TOTAL_DAYS} 天")

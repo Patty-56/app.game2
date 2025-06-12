@@ -1,0 +1,382 @@
+[
+  {
+    "lesson": "input() 和變數的使用方式",
+    "example": {
+      "question": "今天要學的是 input() 和變數如何搭配使用。",
+      "answer": "name = input('請輸入名字：')\nprint(name)",
+      "explanation": "input() 會提示使用者輸入資料，並可存到變數（如 name），再用 print() 印出。"
+    },
+    "practice": {
+      "question": "哪個語法會正確輸出使用者名字？",
+      "options": [
+        "A. print(input)",
+        "B. print(input())",
+        "C. input(print())",
+        "D. input = 'Tom'"
+      ],
+      "answer": "B",
+      "explanation": "print(input()) 會先執行 input() 讓使用者輸入，再用 print() 輸出結果，符合要求。其它選項不是語法錯誤，就是不會輸出名字。"
+    }
+  },
+  {
+    "lesson": "print() 的基本用法",
+    "example": {
+      "question": "請寫出讓螢幕顯示 Hello, World! 的 Python 程式",
+      "answer": "print('Hello, World!')",
+      "explanation": "使用 print() 函式可將括號內的文字顯示在畫面上。"
+    },
+    "practice": {
+      "question": "請選出正確可以顯示 123 的語法？",
+      "options": [
+        "A. print(123)",
+        "B. echo(123)",
+        "C. print 123",
+        "D. show(123)"
+      ],
+      "answer": "A",
+      "explanation": "正確語法是 print(123)，echo 或 show 不是 Python 內建函式，print 123 少了括號。"
+    }
+  },
+  {
+    "lesson": "變數的指定與運算",
+    "example": {
+      "question": "如何將 5 存到變數 x，再將 x+2 顯示出來？",
+      "answer": "x = 5\nprint(x + 2)",
+      "explanation": "用等號指定數值給變數，再用 print() 印出運算結果。"
+    },
+    "practice": {
+      "question": "執行下列程式結果為何？\nx = 2\ny = 3\nprint(x * y)",
+      "options": [
+        "A. 5",
+        "B. 6",
+        "C. 23",
+        "D. x * y"
+      ],
+      "answer": "B",
+      "explanation": "2 乘以 3 等於 6。"
+    }
+  },
+  {
+    "lesson": "資料型態與型態轉換",
+    "example": {
+      "question": "如何把字串 '123' 轉成整數？",
+      "answer": "num = int('123')",
+      "explanation": "用 int() 可以把字串數字轉成整數型態。"
+    },
+    "practice": {
+      "question": "執行下列程式 print(type('456')) 結果為？",
+      "options": [
+        "A. <class 'int'>",
+        "B. <class 'str'>",
+        "C. <class 'float'>",
+        "D. <class 'bool'>"
+      ],
+      "answer": "B",
+      "explanation": "'456' 是字串，type() 回傳 <class 'str'>。"
+    }
+  },
+  {
+    "lesson": "input() 取得數字並運算",
+    "example": {
+      "question": "如何讓使用者輸入年齡並加 1 輸出？",
+      "answer": "age = int(input('請輸入年齡：'))\nprint(age + 1)",
+      "explanation": "input() 取得的是字串，要用 int() 轉成整數後才能運算。"
+    },
+    "practice": {
+      "question": "下列何者會讓使用者輸入數字並直接印出？",
+      "options": [
+        "A. print(int(input()))",
+        "B. print(str(input()))",
+        "C. print(input(int()))",
+        "D. print(input(str()))"
+      ],
+      "answer": "A",
+      "explanation": "input() 取得字串，用 int() 轉成數字再 print。"
+    }
+  },
+  {
+    "lesson": "if 判斷式基礎",
+    "example": {
+      "question": "如何判斷 x 是否大於 10 並印出 '大於10'？",
+      "answer": "if x > 10:\n    print('大於10')",
+      "explanation": "if 條件後面要接冒號，區塊內要縮排。"
+    },
+    "practice": {
+      "question": "x = 12\nif x > 10:\n    print('yes')\n執行結果為？",
+      "options": [
+        "A. 12",
+        "B. yes",
+        "C. 無輸出",
+        "D. x > 10"
+      ],
+      "answer": "B",
+      "explanation": "x=12，條件成立，印出 yes。"
+    }
+  },
+  {
+    "lesson": "if-else 條件結構",
+    "example": {
+      "question": "如何判斷 x 是否為 0，若是則印 Zero，否則印 Not zero？",
+      "answer": "if x == 0:\n    print('Zero')\nelse:\n    print('Not zero')",
+      "explanation": "if...else 結構可處理兩種情況。"
+    },
+    "practice": {
+      "question": "x = 3\nif x == 5:\n    print('A')\nelse:\n    print('B')\n輸出為？",
+      "options": [
+        "A. A",
+        "B. B",
+        "C. 3",
+        "D. 無輸出"
+      ],
+      "answer": "B",
+      "explanation": "x==5 不成立，執行 else 區塊印 B。"
+    }
+  },
+  {
+    "lesson": "巢狀 if 判斷",
+    "example": {
+      "question": "如何根據分數輸出及格或不及格？",
+      "answer": "if score >= 60:\n    print('及格')\nelse:\n    print('不及格')",
+      "explanation": "條件成立印及格，否則印不及格。"
+    },
+    "practice": {
+      "question": "score = 59\nif score >= 60:\n    print('pass')\nelse:\n    print('fail')\n輸出為？",
+      "options": [
+        "A. pass",
+        "B. fail",
+        "C. 59",
+        "D. 無輸出"
+      ],
+      "answer": "B",
+      "explanation": "59 < 60，不及格，印 fail。"
+    }
+  },
+  {
+    "lesson": "多重條件判斷 (elif)",
+    "example": {
+      "question": "依成績分三段輸出：>=90 優秀、>=60 及格、其餘不及格？",
+      "answer": "if score >= 90:\n    print('優秀')\nelif score >= 60:\n    print('及格')\nelse:\n    print('不及格')",
+      "explanation": "用 elif 可處理多個條件。"
+    },
+    "practice": {
+      "question": "score = 85\nif score >= 90:\n    print('A')\nelif score >= 60:\n    print('B')\nelse:\n    print('C')\n輸出為？",
+      "options": [
+        "A. A",
+        "B. B",
+        "C. C",
+        "D. 無輸出"
+      ],
+      "answer": "B",
+      "explanation": "85 >= 60，但 < 90，印 B。"
+    }
+  },
+  {
+    "lesson": "while 迴圈基礎",
+    "example": {
+      "question": "如何用 while 印 1~3？",
+      "answer": "i = 1\nwhile i <= 3:\n    print(i)\n    i += 1",
+      "explanation": "while 會重複，直到條件不成立。"
+    },
+    "practice": {
+      "question": "i = 0\nwhile i < 2:\n    print(i)\n    i += 1\n最後印出的數字有哪些？",
+      "options": [
+        "A. 0, 1",
+        "B. 1, 2",
+        "C. 0, 1, 2",
+        "D. 1"
+      ],
+      "answer": "A",
+      "explanation": "i 先是 0，印出 0，i 變 1，再印 1，然後 i 變 2 結束。"
+    }
+  },
+  {
+    "lesson": "for 迴圈基礎",
+    "example": {
+      "question": "如何用 for 印出 1~5？",
+      "answer": "for i in range(1, 6):\n    print(i)",
+      "explanation": "range(1,6) 會產生 1~5。"
+    },
+    "practice": {
+      "question": "for i in range(3):\n    print(i)\n印出？",
+      "options": [
+        "A. 0 1 2",
+        "B. 1 2 3",
+        "C. 0 1 2 3",
+        "D. 1 2"
+      ],
+      "answer": "A",
+      "explanation": "range(3) 產生 0,1,2。"
+    }
+  },
+  {
+    "lesson": "累加練習",
+    "example": {
+      "question": "如何計算 1~3 的總和？",
+      "answer": "total = 0\nfor i in range(1, 4):\n    total += i\nprint(total)",
+      "explanation": "for 迴圈累加到變數 total。"
+    },
+    "practice": {
+      "question": "total = 0\nfor i in range(2):\n    total += i\nprint(total)\n輸出？",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 0",
+        "D. 3"
+      ],
+      "answer": "A",
+      "explanation": "i 取 0,1，total=0+0+1=1。"
+    }
+  },
+  {
+    "lesson": "字串處理",
+    "example": {
+      "question": "怎麼把 'abc' 變成大寫？",
+      "answer": "s = 'abc'\nprint(s.upper())",
+      "explanation": "upper() 方法可將字串轉大寫。"
+    },
+    "practice": {
+      "question": "s = 'hi'\nprint(s.upper())\n輸出？",
+      "options": [
+        "A. hi",
+        "B. HI",
+        "C. Hi",
+        "D. hI"
+      ],
+      "answer": "B",
+      "explanation": "upper() 會全部轉大寫。"
+    }
+  },
+  {
+    "lesson": "字串格式化",
+    "example": {
+      "question": "如何讓 name=Tom 時印出 'Hello, Tom!'？",
+      "answer": "name = 'Tom'\nprint(f'Hello, {name}!')",
+      "explanation": "f 字串可直接插入變數內容。"
+    },
+    "practice": {
+      "question": "name = 'Amy'\nprint(f'Hi, {name}')\n輸出？",
+      "options": [
+        "A. Hi, Amy",
+        "B. Hi, {name}",
+        "C. Amy",
+        "D. name"
+      ],
+      "answer": "A",
+      "explanation": "f 字串會把變數值帶入。"
+    }
+  },
+  {
+    "lesson": "串列(list)基礎",
+    "example": {
+      "question": "如何建立一個含 1,2,3 的串列？",
+      "answer": "lst = [1, 2, 3]",
+      "explanation": "用中括號建立串列。"
+    },
+    "practice": {
+      "question": "lst = [4, 5, 6]\nprint(lst[1])\n輸出？",
+      "options": [
+        "A. 4",
+        "B. 5",
+        "C. 6",
+        "D. 1"
+      ],
+      "answer": "B",
+      "explanation": "lst[1] 取第二個元素，值為 5。"
+    }
+  },
+  {
+    "lesson": "串列長度與加法",
+    "example": {
+      "question": "如何取得 lst=[7,8,9] 的長度？",
+      "answer": "len(lst)",
+      "explanation": "用 len() 取得串列長度。"
+    },
+    "practice": {
+      "question": "lst = [1,2,3]\nlst.append(4)\nprint(len(lst))\n輸出？",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 5",
+        "D. 1"
+      ],
+      "answer": "B",
+      "explanation": "加了一個元素，長度為 4。"
+    }
+  },
+  {
+    "lesson": "for 走訪串列",
+    "example": {
+      "question": "如何印出 lst=[2,4,6] 每個元素？",
+      "answer": "for i in lst:\n    print(i)",
+      "explanation": "for 可直接走訪串列元素。"
+    },
+    "practice": {
+      "question": "lst = [1,3]\nfor i in lst:\n    print(i)\n印出？",
+      "options": [
+        "A. 1 3",
+        "B. 3 1",
+        "C. 1 3 1 3",
+        "D. 3"
+      ],
+      "answer": "A",
+      "explanation": "for 依序印出 1, 3。"
+    }
+  },
+  {
+    "lesson": "字典(dict)基礎",
+    "example": {
+      "question": "如何建立一個 key 為 'a', 值為 1 的字典？",
+      "answer": "d = {'a': 1}",
+      "explanation": "用大括號建立 key:value 對的字典。"
+    },
+    "practice": {
+      "question": "d = {'x': 10, 'y': 20}\nprint(d['y'])\n輸出？",
+      "options": [
+        "A. 10",
+        "B. 20",
+        "C. y",
+        "D. x"
+      ],
+      "answer": "B",
+      "explanation": "d['y'] 取出 value=20。"
+    }
+  },
+  {
+    "lesson": "函式定義與呼叫",
+    "example": {
+      "question": "如何定義一個加法函式並呼叫？",
+      "answer": "def add(x, y):\n    return x + y\nprint(add(1, 2))",
+      "explanation": "用 def 定義函式，return 回傳結果。"
+    },
+    "practice": {
+      "question": "def hello():\n    print('hi')\nhello()\n輸出？",
+      "options": [
+        "A. hi",
+        "B. hello",
+        "C. def hello()",
+        "D. 無輸出"
+      ],
+      "answer": "A",
+      "explanation": "hello() 會執行函式內容印 hi。"
+    }
+  },
+  {
+    "lesson": "import 與模組",
+    "example": {
+      "question": "如何引入 math 模組並印出 pi？",
+      "answer": "import math\nprint(math.pi)",
+      "explanation": "import 可載入標準模組，屬性用 . 取用。"
+    },
+    "practice": {
+      "question": "import math\nprint(math.sqrt(9))\n輸出？",
+      "options": [
+        "A. 81",
+        "B. 3.0",
+        "C. 9",
+        "D. 3"
+      ],
+      "answer": "B",
+      "explanation": "sqrt(9) 回傳 3.0。"
+    }
+  }
+]

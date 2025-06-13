@@ -22,6 +22,10 @@ if 'step' not in st.session_state:
 
 st.title("🌌 水色之夜")
 
+if st.session_state.current_day > TOTAL_DAYS:
+    st.success('🎉 恭喜你完成21天打卡與推理冒險！你的健康與腦力都 Level Up 了！')
+    st.stop()
+
 if st.session_state.user is None:
     st.subheader("輸入身高與體重")
     height = st.number_input("身高 (cm)", min_value=90, max_value=250)
